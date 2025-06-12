@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audrik e Ana</title>
 
-      <!-- NOVO: Ícone para a aba do navegador -->
+      <!-- Ícone para a aba do navegador -->
     <link rel="icon" type="image/png" href="https://em-content.zobj.net/source/microsoft-teams/363/red-heart_2764-fe0f.png">
     
     <!-- Tailwind CSS -->
@@ -27,8 +27,6 @@
         .delay-5 { animation-delay: 1.0s; } .delay-6 { animation-delay: 1.2s; }
 
         /* Estilos Comuns */
-        .custom-file-upload { cursor: pointer; transition: all 0.3s ease; }
-        input[type="file"] { display: none; }
         .gallery-video { width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem; }
 
         /* Estilos Lightbox */
@@ -58,8 +56,7 @@
         #message-modal-content { background-color: #fff7f9; padding: 30px; border-radius: 10px; text-align: center; max-width: 90vw; width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); position: relative; }
         #close-message-modal { position: absolute; top: 10px; right: 15px; font-size: 1.5rem; color: #50223c; cursor: pointer; }
         
-        /* --- NOVOS ESTILOS --- */
-        /* Razões porque te amo */
+        /* Estilos Razões porque te amo */
         .reason-card-container { perspective: 1000px; }
         .reason-card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.6s; cursor: pointer; }
         .reason-card.is-flipped { transform: rotateY(180deg); }
@@ -67,10 +64,10 @@
         .reason-card-front { background-color: #fecdd3; color: #9f1239; }
         .reason-card-back { background-color: #f43f5e; color: white; transform: rotateY(180deg); }
 
-        /* Gerador de Encontros */
+        /* Estilos Gerador de Encontros */
         #date-idea-result { min-height: 80px; transition: all 0.3s; }
 
-        /* Quiz do Casal */
+        /* Estilos Quiz do Casal */
         .quiz-option { transition: all 0.2s; }
         .quiz-option.correct { background-color: #16a34a !important; color: white !important; }
         .quiz-option.incorrect { background-color: #dc2626 !important; color: white !important; }
@@ -79,15 +76,22 @@
 <body class="bg-[#fff7f9]">
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-        <!-- Secções existentes (Título, Contador, Linha do Tempo, Galeria) -->
+        <!-- Secção de Título -->
         <section class="text-center py-16 sm:py-24 section-fade-in relative">
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-rose-900">Para o amor da minha vida</h1>
             <p class="mt-6 text-lg sm:text-xl text-rose-700 max-w-2xl mx-auto">Uma pequena lembrança de todos os momentos incríveis que construímos juntos.</p>
             <div class="hidden-heart top-1/4 right-0 md:right-10" data-message="Sabia que o seu sorriso foi a primeira coisa que me fez apaixonar?">❤️</div>
         </section>
+        
+        <!-- Secção do Contador -->
         <section id="contador" class="pb-16 sm:pb-24 section-fade-in delay-1">
-            <div class="text-center"><h2 class="text-2xl sm:text-3xl font-bold text-center text-rose-900">Estamos Juntos Há</h2><div id="relationship-counter" class="flex justify-center items-center space-x-4 sm:space-x-8 mt-6 text-rose-700"></div></div>
+            <div class="text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-center text-rose-900">Estamos Juntos Há</h2>
+                <div id="relationship-counter" class="flex justify-center items-center space-x-4 sm:space-x-8 mt-6 text-rose-700"></div>
+            </div>
         </section>
+
+        <!-- Secção da Linha do Tempo -->
         <section id="historia" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in delay-2">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-rose-900 mb-12">Nossa História em Momentos</h2>
             <div class="timeline-container relative">
@@ -95,16 +99,29 @@
                 <div class="timeline-item left anim-delay-1"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Onde nos conhecemos</h3><time class="text-sm text-rose-500">28 de Dezembro de 2023</time><p class="mt-2 text-rose-700">Onde tudo começou. No lugar menos esperado de encontrar um grande amor, no meio de muitas loucuras em Guarap..... Maldivas kkkk</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeiro Encontro" class="mt-4 rounded-md"></div></div>
                 <div class="timeline-item right anim-delay-2"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Primeiro encontro</h3><time class="text-sm text-rose-500">22 de Março de 2024</time><p class="mt-2 text-rose-700">O dia em que eu tive meu primeiro date com você e da vida kkkkkk Acertei muito o lugar.</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Pedido de Namoro" class="mt-4 rounded-md"></div></div>
                 <div class="timeline-item left anim-delay-3"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Pedido de namoro</h3><time class="text-sm text-rose-500">07 de Julho de 2024</time><p class="mt-2 text-rose-700">O tão aguardado pedido de namoro kkkkk apesar dos problemas foi a melhor coisa que fiz!</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeira Viagem" class="mt-4 rounded-md"></div></div>
-                <div class="timeline-item left anim-delay-4"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Nossa Primeira Viagem</h3><time class="text-sm text-rose-500">Dezembro de 2024</time><p class="mt-2 text-rose-700">Reveillon com os vovos do momo kkkkkk, conhecendo Ubatuba(Ubachuva)</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeira Viagem" class="mt-4 rounded-md"></div></div>
-            </div>
+                <div class="timeline-item right anim-delay-4"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Nossa Primeira Viagem</h3><time class="text-sm text-rose-500">Dezembro de 2024</time><p class="mt-2 text-rose-700">Reveillon com os vovos do momo kkkkkk, conhecendo Ubatuba(Ubachuva)</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeira Viagem" class="mt-4 rounded-md"></div></div>
             </div>
         </section>
+        
+        <!-- SEÇÃO DA GALERIA MODIFICADA -->
         <section id="galeria" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in delay-3">
-            <div class="text-center"><h2 class="text-3xl sm:text-4xl font-bold text-rose-900">Galeria de Momentos</h2><p class="mt-4 text-lg text-rose-700">Memórias que guardamos no coração e agora, aqui.</p><div class="mt-8"><label for="file-upload" class="custom-file-upload inline-block bg-rose-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-rose-600">Adicionar Mais Memórias</label><input id="file-upload" type="file" multiple accept="image/png, image/jpeg, image/gif, video/mp4"><p id="upload-feedback" class="text-sm text-rose-600 mt-2"></p></div></div>
-            <div id="gallery-container" class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 min-h-[150px]"></div>
+            <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-rose-900">Galeria de Momentos</h2>
+                <p class="mt-4 text-lg text-rose-700">Memórias que guardamos no coração e agora, aqui.</p>
+            </div>
+            <!-- Container da galeria com as imagens -->
+            <div id="gallery-container" class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <!-- Para alterar as imagens, substitua os links 'src' abaixo pelos links das suas fotos -->
+                <img src="https://placehold.co/600x400/fecdd3/50223c?text=N%C3%B3s+Dois" alt="Foto do casal 1" class="cursor-pointer w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/fbbf24/50223c?text=Viagem" alt="Foto de viagem" class="cursor-pointer w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/f472b6/50223c?text=Sorrindo" alt="Foto sorrindo" class="cursor-pointer w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/a78bfa/50223c?text=Data+Especial" alt="Foto de uma data especial" class="cursor-pointer w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/60a5fa/50223c?text=Aventura" alt="Foto de uma aventura" class="cursor-pointer w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/34d399/50223c?text=Momento+%C3%9Anico" alt="Foto de um momento único" class="cursor-pointer w-full h-full object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+            </div>
         </section>
 
-        <!-- NOVO: Secção "Razões porque te amo" -->
+        <!-- Secção "Razões porque te amo" -->
         <section id="reasons" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in delay-4">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-rose-900 mb-12">Algumas Razões Porque Te Amo</h2>
             <div id="reasons-container" class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
@@ -112,7 +129,7 @@
             </div>
         </section>
 
-        <!-- NOVO: Secção "Gerador de Encontros" -->
+        <!-- Secção "Gerador de Encontros" -->
         <section id="date-generator" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in delay-5">
             <div class="text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-rose-900">Nosso Próximo Encontro?</h2>
@@ -124,7 +141,7 @@
             </div>
         </section>
 
-        <!-- NOVO: Secção "Quiz do Casal" -->
+        <!-- Secção "Quiz do Casal" -->
         <section id="quiz" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in delay-6">
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-rose-900 mb-12">O Quiz do Nosso Amor</h2>
             <div id="quiz-container" class="bg-white p-6 sm:p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
@@ -133,8 +150,20 @@
         </section>
         
         <!-- Secção de Mensagem Final e Footer -->
-        <section id="mensagem" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in"><div class="max-w-3xl mx-auto text-center relative"><div class="hidden-heart bottom-0 right-0 md:right-20" data-message="Eu te amo mais do que todas as estrelas no céu. ❤️">❤️</div><h2 class="text-3xl sm:text-4xl font-bold text-rose-900">Uma Mensagem Para Você</h2><div class="mt-8 text-rose-800 text-xl leading-relaxed italic"><p>"Para o mundo, você pode ser uma pessoa, mas para mim, você é o mundo. Cada momento contigo é um presente, obrigado por ser minha namorada princesa. Cada momento ao seu lado é único. Minha mega da virada"</p><p class="mt-6 not-italic font-semibold text-rose-900">Com todo o meu amor, [Seu Nome]</p></div></div></section>
-        <footer class="text-center py-10 mt-16 border-t border-rose-200 text-rose-500 section-fade-in"><p>Feito com ❤️ para a melhor namorada do universo.</p><p>Feliz Dia dos Namorados!</p></footer>
+        <section id="mensagem" class="py-16 sm:py-24 border-t border-rose-200 section-fade-in">
+            <div class="max-w-3xl mx-auto text-center relative">
+                <div class="hidden-heart bottom-0 right-0 md:right-20" data-message="Eu te amo mais do que todas as estrelas no céu. ❤️">❤️</div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-rose-900">Uma Mensagem Para Você</h2>
+                <div class="mt-8 text-rose-800 text-xl leading-relaxed italic">
+                    <p>"Para o mundo, você pode ser uma pessoa, mas para mim, você é o mundo. Cada momento contigo é um presente, obrigado por ser minha namorada princesa. Cada momento ao seu lado é único. Minha mega da virada"</p>
+                    <p class="mt-6 not-italic font-semibold text-rose-900">Com todo o meu amor, [Seu Nome]</p>
+                </div>
+            </div>
+        </section>
+        <footer class="text-center py-10 mt-16 border-t border-rose-200 text-rose-500 section-fade-in">
+            <p>Feito com ❤️ para a melhor namorada do universo.</p>
+            <p>Feliz Dia dos Namorados!</p>
+        </footer>
     </main>
 
     <!-- Modais (Lightbox, Mensagem Escondida) -->
@@ -147,7 +176,8 @@
         const relationshipStartDate = new Date('2024-07-07T00:00:00');
         const counterElement = document.getElementById('relationship-counter');
         function updateCounter() {
-            const now = new Date(); const diff = now - relationshipStartDate;
+            const now = new Date(); 
+            const diff = now - relationshipStartDate;
             const years = Math.floor(diff / 31556952000);
             const months = Math.floor((diff % 31556952000) / 2629746000);
             const days = Math.floor(((diff % 31556952000) % 2629746000) / 86400000);
@@ -155,149 +185,149 @@
         }
         if(counterElement) { updateCounter(); setInterval(updateCounter, 3600000); }
 
-        // --- GALERIA E LIGHTBOX ---
-        const fileUploadInput = document.getElementById('file-upload');
+        // --- LÓGICA DA GALERIA E LIGHTBOX ---
         const galleryContainer = document.getElementById('gallery-container');
-        fileUploadInput.addEventListener('change', (event) => { /* ... código de upload ... */ });
         const lightbox = document.getElementById('lightbox');
         const lightboxContent = document.getElementById('lightbox-content');
         const closeLightbox = document.getElementById('close-lightbox');
-        function openLightbox(element) { lightboxContent.innerHTML = ''; lightboxContent.appendChild(element); lightbox.classList.add('active'); }
-        closeLightbox.addEventListener('click', () => lightbox.classList.remove('active'));
-        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
-        function createGalleryItem(file) { /* ... código para criar item da galeria ... */ }
 
-        // --- MENSAGENS ESCONDIDAS ---
+        function openLightbox(element) {
+            lightboxContent.innerHTML = '';
+            lightboxContent.appendChild(element);
+            lightbox.classList.add('active');
+        }
+
+        // Adiciona evento de clique a todas as imagens na galeria
+        if (galleryContainer) {
+            galleryContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'IMG') {
+                    const lightboxMedia = document.createElement('img');
+                    lightboxMedia.src = e.target.src;
+                    openLightbox(lightboxMedia);
+                }
+            });
+        }
+
+        // Fecha o lightbox
+        if(closeLightbox) {
+            closeLightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+        }
+        if(lightbox) {
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+        }
+        
+        // --- LÓGICA DAS MENSAGENS ESCONDIDAS ---
         const messageModal = document.getElementById('message-modal');
         const messageText = document.getElementById('message-text');
         const closeMessageModal = document.getElementById('close-message-modal');
         document.querySelectorAll('.hidden-heart').forEach(heart => { heart.addEventListener('click', () => { messageText.textContent = heart.dataset.message; messageModal.classList.add('active'); }); });
         function closeMsgModal() { messageModal.classList.remove('active'); }
-        closeMessageModal.addEventListener('click', closeMsgModal);
-        messageModal.addEventListener('click', (e) => { if (e.target === messageModal) closeMsgModal(); });
+        if (closeMessageModal) closeMessageModal.addEventListener('click', closeMsgModal);
+        if (messageModal) messageModal.addEventListener('click', (e) => { if (e.target === messageModal) closeMsgModal(); });
 
-        /* --- NOVAS FUNCIONALIDADES --- */
-
-        // 1. LÓGICA DAS "RAZÕES PORQUE TE AMO"
+        // --- LÓGICA DAS "RAZÕES PORQUE TE AMO" ---
         const reasonsContainer = document.getElementById('reasons-container');
-        const reasons = [ // Personalize estas razões!
-            "Pelo teu sorriso contagiante.",
-            "Pela forma como me apoias sempre.",
-            "Porque me fazes rir como ninguém.",
-            "Pela tua inteligência e a forma que sonha em ser médica",
-            "Pelo seus puns moto-moto kkk",
-            "Porque cada dia contigo é uma aventura.",
-            "Pelo teu abraço, que é o meu porto seguro.",
-            "Porque me torna uma pessoa melhor."
-        ];
-        reasons.forEach(reasonText => {
-            const cardContainer = document.createElement('div');
-            cardContainer.className = 'reason-card-container h-48';
-            
-            const card = document.createElement('div');
-            card.className = 'reason-card';
-            card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+        if (reasonsContainer) {
+            const reasons = [
+                "Pelo teu sorriso contagiante.", "Pela forma como me apoias sempre.", "Porque me fazes rir como ninguém.", "Pela tua inteligência e a forma que sonha em ser médica",
+                "Pelo seus puns moto-moto kkk", "Porque cada dia contigo é uma aventura.", "Pelo teu abraço, que é o meu porto seguro.", "Porque me torna uma pessoa melhor."
+            ];
+            reasons.forEach(reasonText => {
+                const cardContainer = document.createElement('div');
+                cardContainer.className = 'reason-card-container h-48';
+                
+                const card = document.createElement('div');
+                card.className = 'reason-card';
+                card.addEventListener('click', () => card.classList.toggle('is-flipped'));
 
-            const cardFront = document.createElement('div');
-            cardFront.className = 'reason-card-face reason-card-front';
-            cardFront.innerHTML = '<span class="text-5xl">❤️</span>';
+                const cardFront = document.createElement('div');
+                cardFront.className = 'reason-card-face reason-card-front';
+                cardFront.innerHTML = '<span class="text-5xl">❤️</span>';
 
-            const cardBack = document.createElement('div');
-            cardBack.className = 'reason-card-face reason-card-back font-semibold';
-            cardBack.textContent = reasonText;
+                const cardBack = document.createElement('div');
+                cardBack.className = 'reason-card-face reason-card-back font-semibold';
+                cardBack.textContent = reasonText;
 
-            card.appendChild(cardFront);
-            card.appendChild(cardBack);
-            cardContainer.appendChild(card);
-            reasonsContainer.appendChild(cardContainer);
-        });
-
-        // 2. LÓGICA DO "GERADOR DE ENCONTROS"
-        const generateDateBtn = document.getElementById('generate-date-btn');
-        const dateIdeaResult = document.getElementById('date-idea-result');
-        const dateIdeas = [ // Personalize estas ideias!
-            "Noite de cinema em casa com pipocas e comida.",
-            "Piquenique ao pôr do sol num Mirante.",
-            "Tentar cozinhar uma receita nova e complicada juntos.",
-            "Passeio de por um parque com caldo de cana e pastel.",
-            "Visitar um museu ou galeria de arte.",
-            "Fazer uma maratona da nossa série favorita.",
-            "Noite de jogos de tabuleiro.",
-            "Observar as estrelas longe da cidade.",
-            "Voltar ao restaurante do nosso primeiro encontro.",
-            "Ir em um motel.",
-            "Ir para um chále.",
-            "Date de casais",
-            "Noite da comida maluca.",
-        ];
-        generateDateBtn.addEventListener('click', () => {
-            dateIdeaResult.textContent = 'A sortear...';
-            let shuffles = 0;
-            const interval = setInterval(() => {
-                dateIdeaResult.textContent = dateIdeas[Math.floor(Math.random() * dateIdeas.length)];
-                shuffles++;
-                if (shuffles > 10) {
-                    clearInterval(interval);
-                    dateIdeaResult.textContent = dateIdeas[Math.floor(Math.random() * dateIdeas.length)];
-                }
-            }, 100);
-        });
-
-        // 3. LÓGICA DO "QUIZ DO CASAL"
-        const quizContainer = document.getElementById('quiz-container');
-        const quizData = [ // Personalize as perguntas e respostas!
-            { question: "Onde foi o nosso primeiro beijo?", answers: ["No cinema", "No carro", "Na praia", "Em casa"], correct: 2 },
-            { question: "Qual é o meu prato favorito que tu fazes?", answers: ["Lasanha", "Strogonoff", "Comida do momo", "Pizza caseira"], correct: 2 },
-            { question: "Qual foi o nosso melhor restaurante?", answers: ["Zavino", "Odoya", "Villeon", "Sushi Art"], correct: 3 }
-        ];
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        function loadQuizQuestion() {
-            if (currentQuestionIndex >= quizData.length) {
-                quizContainer.innerHTML = `<h3 class="text-xl font-bold text-center text-rose-800">Quiz Terminado!</h3><p class="text-center mt-4 text-lg">Acertou ${score} de ${quizData.length} perguntas!</p><p class="text-center mt-2 text-rose-600">Isso prova o quanto nos conhecemos bem!</p><button id="restart-quiz-btn" class="mt-6 w-full bg-rose-500 text-white font-semibold py-2 rounded-lg">Recomeçar</button>`;
-                document.getElementById('restart-quiz-btn').addEventListener('click', () => {
-                    currentQuestionIndex = 0;
-                    score = 0;
-                    loadQuizQuestion();
-                });
-                return;
-            }
-
-            const currentQuestion = quizData[currentQuestionIndex];
-            quizContainer.innerHTML = `
-                <p class="text-lg font-semibold text-rose-800 mb-4">${currentQuestionIndex + 1}. ${currentQuestion.question}</p>
-                <div id="quiz-options" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    ${currentQuestion.answers.map((answer, index) => `
-                        <button class="quiz-option p-4 rounded-lg bg-rose-100 text-rose-800 hover:bg-rose-200" data-index="${index}">
-                            ${answer}
-                        </button>
-                    `).join('')}
-                </div>
-            `;
-
-            document.querySelectorAll('.quiz-option').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const selectedIndex = parseInt(e.target.dataset.index);
-                    const allOptions = document.querySelectorAll('.quiz-option');
-                    allOptions.forEach(btn => btn.disabled = true); // Desativa botões
-
-                    if (selectedIndex === currentQuestion.correct) {
-                        e.target.classList.add('correct');
-                        score++;
-                    } else {
-                        e.target.classList.add('incorrect');
-                        allOptions[currentQuestion.correct].classList.add('correct');
-                    }
-
-                    setTimeout(() => {
-                        currentQuestionIndex++;
-                        loadQuizQuestion();
-                    }, 2000);
-                });
+                card.appendChild(cardFront);
+                card.appendChild(cardBack);
+                cardContainer.appendChild(card);
+                reasonsContainer.appendChild(cardContainer);
             });
         }
-        loadQuizQuestion();
+
+        // --- LÓGICA DO "GERADOR DE ENCONTROS" ---
+        const generateDateBtn = document.getElementById('generate-date-btn');
+        const dateIdeaResult = document.getElementById('date-idea-result');
+        if (generateDateBtn) {
+            const dateIdeas = [
+                "Noite de cinema em casa com pipocas e comida.", "Piquenique ao pôr do sol num Mirante.", "Tentar cozinhar uma receita nova e complicada juntos.", "Passeio de por um parque com caldo de cana e pastel.",
+                "Visitar um museu ou galeria de arte.", "Fazer uma maratona da nossa série favorita.", "Noite de jogos de tabuleiro.", "Observar as estrelas longe da cidade.",
+                "Voltar ao restaurante do nosso primeiro encontro.", "Ir em um motel.", "Ir para um chále.", "Date de casais", "Noite da comida maluca."
+            ];
+            generateDateBtn.addEventListener('click', () => {
+                dateIdeaResult.textContent = 'A sortear...';
+                let shuffles = 0;
+                const interval = setInterval(() => {
+                    dateIdeaResult.textContent = dateIdeas[Math.floor(Math.random() * dateIdeas.length)];
+                    shuffles++;
+                    if (shuffles > 10) {
+                        clearInterval(interval);
+                        dateIdeaResult.textContent = dateIdeas[Math.floor(Math.random() * dateIdeas.length)];
+                    }
+                }, 100);
+            });
+        }
+
+        // --- LÓGICA DO "QUIZ DO CASAL" ---
+        const quizContainer = document.getElementById('quiz-container');
+        if (quizContainer) {
+            const quizData = [ 
+                { question: "Onde foi o nosso primeiro beijo?", answers: ["No cinema", "No carro", "Na praia", "Em casa"], correct: 2 },
+                { question: "Qual é o meu prato favorito que tu fazes?", answers: ["Lasanha", "Strogonoff", "Comida do momo", "Pizza caseira"], correct: 2 },
+                { question: "Qual foi o nosso melhor restaurante?", answers: ["Zavino", "Odoya", "Villeon", "Sushi Art"], correct: 3 }
+            ];
+            let currentQuestionIndex = 0;
+            let score = 0;
+
+            function loadQuizQuestion() {
+                if (currentQuestionIndex >= quizData.length) {
+                    quizContainer.innerHTML = `<h3 class="text-xl font-bold text-center text-rose-800">Quiz Terminado!</h3><p class="text-center mt-4 text-lg">Acertou ${score} de ${quizData.length} perguntas!</p><p class="text-center mt-2 text-rose-600">Isso prova o quanto nos conhecemos bem!</p><button id="restart-quiz-btn" class="mt-6 w-full bg-rose-500 text-white font-semibold py-2 rounded-lg">Recomeçar</button>`;
+                    document.getElementById('restart-quiz-btn').addEventListener('click', () => {
+                        currentQuestionIndex = 0; score = 0; loadQuizQuestion();
+                    });
+                    return;
+                }
+
+                const currentQuestion = quizData[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <p class="text-lg font-semibold text-rose-800 mb-4">${currentQuestionIndex + 1}. ${currentQuestion.question}</p>
+                    <div id="quiz-options" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        ${currentQuestion.answers.map((answer, index) => `<button class="quiz-option p-4 rounded-lg bg-rose-100 text-rose-800 hover:bg-rose-200" data-index="${index}">${answer}</button>`).join('')}
+                    </div>`;
+
+                document.querySelectorAll('.quiz-option').forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const selectedIndex = parseInt(e.target.dataset.index);
+                        const allOptions = document.querySelectorAll('.quiz-option');
+                        allOptions.forEach(btn => btn.disabled = true); 
+
+                        if (selectedIndex === currentQuestion.correct) {
+                            e.target.classList.add('correct');
+                            score++;
+                        } else {
+                            e.target.classList.add('incorrect');
+                            allOptions[currentQuestion.correct].classList.add('correct');
+                        }
+
+                        setTimeout(() => {
+                            currentQuestionIndex++;
+                            loadQuizQuestion();
+                        }, 2000);
+                    });
+                });
+            }
+            loadQuizQuestion();
+        }
     });
     </script>
 </body>
