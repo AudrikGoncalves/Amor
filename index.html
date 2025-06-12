@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa História</title>
+    <title>Audrik e Ana</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -89,8 +89,8 @@
             <h2 class="text-3xl sm:text-4xl font-bold text-center text-rose-900 mb-12">Nossa História em Momentos</h2>
             <div class="timeline-container relative">
                 <div class="hidden-heart top-1/2 left-0 md:left-10" data-message="Lembro da roupa que você estava usando no nosso primeiro encontro. Estava perfeita!">❤️</div>
-                <div class="timeline-item left anim-delay-1"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Nosso Primeiro Encontro</h3><time class="text-sm text-rose-500">15 de Janeiro de 2022</time><p class="mt-2 text-rose-700">Onde tudo começou. Um café, uma conversa longa e a certeza de que algo especial estava nascendo.</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeiro Encontro" class="mt-4 rounded-md"></div></div>
-                <div class="timeline-item right anim-delay-2"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">O Pedido de Namoro</h3><time class="text-sm text-rose-500">20 de Fevereiro de 2022</time><p class="mt-2 text-rose-700">O dia em que o "sim" mudou nossas vidas para sempre. O começo oficial da nossa jornada.</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Pedido de Namoro" class="mt-4 rounded-md"></div></div>
+                <div class="timeline-item left anim-delay-1"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Onde nos conhecemos</h3><time class="text-sm text-rose-500">28 de Dezembro de 2023</time><p class="mt-2 text-rose-700">Onde tudo começou. No lugar menos esperado de encontrar um grande amor, no meio de muitas loucuras em Guarap..... Malvdivas kkkk</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeiro Encontro" class="mt-4 rounded-md"></div></div>
+                <div class="timeline-item right anim-delay-2"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Primeiro encontro</h3><time class="text-sm text-rose-500">22 de Março de 2024</time><p class="mt-2 text-rose-700">O dia em que o "sim" mudou nossas vidas para sempre. O começo oficial da nossa jornada.</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Pedido de Namoro" class="mt-4 rounded-md"></div></div>
                 <div class="timeline-item left anim-delay-3"><div class="timeline-item-content"><h3 class="font-bold text-lg text-rose-800">Nossa Primeira Viagem</h3><time class="text-sm text-rose-500">Julho de 2023</time><p class="mt-2 text-rose-700">A primeira de muitas aventuras! Criamos memórias inesquecíveis explorando o mundo juntos.</p><img src="https://placehold.co/400x250/fecdd3/50223c?text=Sua+Foto+Aqui" alt="Primeira Viagem" class="mt-4 rounded-md"></div></div>
             </div>
         </section>
@@ -179,11 +179,11 @@
             "Pelo teu sorriso contagiante.",
             "Pela forma como me apoias sempre.",
             "Porque me fazes rir como ninguém.",
-            "Pela tua inteligência e perspicácia.",
-            "Pelo teu carinho nos dias difíceis.",
+            "Pela tua inteligência e a forma que sonha em ser médica",
+            "Pelo seus puns moto-moto kkk",
             "Porque cada dia contigo é uma aventura.",
-            "Pelo teu abraço, que é o meu lugar seguro.",
-            "Porque me tornas uma pessoa melhor."
+            "Pelo teu abraço, que é o meu porto seguro.",
+            "Porque me torna uma pessoa melhor."
         ];
         reasons.forEach(reasonText => {
             const cardContainer = document.createElement('div');
@@ -211,15 +211,19 @@
         const generateDateBtn = document.getElementById('generate-date-btn');
         const dateIdeaResult = document.getElementById('date-idea-result');
         const dateIdeas = [ // Personalize estas ideias!
-            "Noite de cinema em casa com pipocas gourmet.",
-            "Piquenique ao pôr do sol num lugar especial.",
+            "Noite de cinema em casa com pipocas e comida.",
+            "Piquenique ao pôr do sol num Mirante.",
             "Tentar cozinhar uma receita nova e complicada juntos.",
-            "Passeio de bicicleta por um parque ou ciclovia.",
+            "Passeio de por um parque com caldo de cana e pastel.",
             "Visitar um museu ou galeria de arte.",
             "Fazer uma maratona da nossa série favorita.",
             "Noite de jogos de tabuleiro.",
             "Observar as estrelas longe da cidade.",
-            "Voltar ao restaurante do nosso primeiro encontro."
+            "Voltar ao restaurante do nosso primeiro encontro.",
+            "Ir em um motel.",
+            "Ir para um chále.",
+            "Date de casais",
+            "Noite da comida maluca.",
         ];
         generateDateBtn.addEventListener('click', () => {
             dateIdeaResult.textContent = 'A sortear...';
@@ -237,9 +241,9 @@
         // 3. LÓGICA DO "QUIZ DO CASAL"
         const quizContainer = document.getElementById('quiz-container');
         const quizData = [ // Personalize as perguntas e respostas!
-            { question: "Onde foi o nosso primeiro beijo?", answers: ["No cinema", "No carro", "Na praia", "Em casa"], correct: 1 },
-            { question: "Qual é o meu prato favorito que tu fazes?", answers: ["Lasanha", "Strogonoff", "Bacalhau com natas", "Pizza caseira"], correct: 0 },
-            { question: "Qual foi o primeiro filme que vimos juntos?", answers: ["Um filme de terror", "Uma comédia romântica", "Um filme da Marvel", "Não me lembro!"], correct: 2 }
+            { question: "Onde foi o nosso primeiro beijo?", answers: ["No cinema", "No carro", "Na praia", "Em casa"], correct: 3 },
+            { question: "Qual é o meu prato favorito que tu fazes?", answers: ["Lasanha", "Strogonoff", "Comida do momo", "Pizza caseira"], correct: 3 },
+            { question: "Qual foi o nosso melhor restaurante?", answers: ["Zavino", "Odoya", "Villeon", "Sushi Art"], correct: 4 }
         ];
         let currentQuestionIndex = 0;
         let score = 0;
